@@ -27,7 +27,13 @@ chmod +x kikit_run.sh
 echo 'write to /etc/rc.d/rc.local'
 echo 'sh /root/ss/kikit_run.sh' >> /etc/rc.d/rc.local
 
-echo 'start sserver'
+echo 'kill ssserver'
+kill -15 $(ps aux | grep 'ssserver' | awk '{print $2}')
+echo 'start ssserver'
 sh sss_run.sh
 echo 'start kikit'
 sh kikit_run.sh
+
+# 识别当前路径写到rc.local中
+# ss安装完后会自动启动，需要关闭
+# ss安装过程是否可以默认参数
