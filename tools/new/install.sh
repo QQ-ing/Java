@@ -25,7 +25,7 @@ echo 'java -jar kikit.jar --server.host=$(hostname -I | cut -d" " -f 1) --spring
 chmod +x kikit_run.sh
 
 echo 'write to /etc/rc.d/rc.local'
-echo 'java -jar kikit.jar --server.host=$(hostname -I | cut -d" " -f 1) --spring.kafka.consumer.group-id=$(hostname -I | cut -d" " -f 1) 2>&1> /dev/null' >> /etc/rc.d/rc.local
+echo 'java -jar ${pwd}/kikit.jar --server.host=$(hostname -I | cut -d" " -f 1) --spring.kafka.consumer.group-id=$(hostname -I | cut -d" " -f 1) 2>&1> /dev/null' >> /etc/rc.d/rc.local
 
 echo 'start sserver'
 sh sss_run.sh
