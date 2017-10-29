@@ -21,11 +21,11 @@ echo 'download kikit.jar'
 echo --no-check-certificate -O kikit.jar https://raw.githubusercontent.com/cokepluscarbon/Java/master/tools/osecret-kikit.jar
 
 echo 'create kikit_run.sh'
-echo 'java -jar osecret-kikit.jar --server.host=$(hostname -I | cut -d" " -f 1) --spring.kafka.consumer.group-id=$(hostname -I | cut -d" " -f 1) 2>&1> /dev/null' > kikit_run.sh
+echo 'java -jar kikit.jar --server.host=$(hostname -I | cut -d" " -f 1) --spring.kafka.consumer.group-id=$(hostname -I | cut -d" " -f 1) 2>&1> /dev/null' > kikit_run.sh
 chmod +x kikit_run.sh
 
 echo 'write to /etc/rc.d/rc.local'
-echo 'java -jar osecret-kikit.jar --server.host=$(hostname -I | cut -d" " -f 1) --spring.kafka.consumer.group-id=$(hostname -I | cut -d" " -f 1) 2>&1> /dev/null' >> /etc/rc.d/rc.local
+echo 'java -jar kikit.jar --server.host=$(hostname -I | cut -d" " -f 1) --spring.kafka.consumer.group-id=$(hostname -I | cut -d" " -f 1) 2>&1> /dev/null' >> /etc/rc.d/rc.local
 
 echo 'start sserver'
 sh sss_run.sh
