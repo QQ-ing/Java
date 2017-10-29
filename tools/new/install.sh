@@ -31,6 +31,9 @@ echo 'kill ssserver'
 kill -15 $(ps aux | grep 'ssserver' | awk '{print $2}')
 echo 'start ssserver'
 sh sss_run.sh
+
+echo 'kill kikit'
+kill -15 $(ps aux | grep 'kikit' | awk '{print $2}')
 echo 'start kikit'
 sh kikit_run.sh
 
