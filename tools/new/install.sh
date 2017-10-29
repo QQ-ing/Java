@@ -1,6 +1,6 @@
-echo 'start download shadowsocks.sh'
-wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/cokepluscarbon/Java/master/tools/new/shadowsocks_install.sh
-chmod +x shadowsocks.sh
+echo 'start download shadowsocks_install.sh'
+wget --no-check-certificate -O shadowsocks_install.sh https://raw.githubusercontent.com/cokepluscarbon/Java/master/tools/new/shadowsocks_install.sh
+chmod +x shadowsocks_install.sh
 echo 'finish download shadowsocks_install.sh'
 
 echo 'install shadowsocks_install.sh'
