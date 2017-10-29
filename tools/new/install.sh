@@ -40,3 +40,5 @@ sh kikit_run.sh
 # 识别当前路径写到rc.local中
 # ss安装完后会自动启动，需要关闭
 # ss安装过程是否可以默认参数
+# 删除rc.local  sed -i '/sss_run.sh/d' /etc/rc.d/rc.local
+# 删除rc.local  sed -i '/kikit_run.sh/d' /etc/rc.d/rc.local
