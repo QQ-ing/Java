@@ -2,11 +2,11 @@
 
 ## Gateway(网关)的作用
 
+### Authentication
+
 API网关可以用于统一处理外部调用的认证和授权，避免每个微服务单纯进行认证和授权。
 
 在VPC(Virtual Private Cloud )内部微服务可以任意调用，而外部的调用统一由网关进行认证和授权，可以减少少量的网络开销，同时让微服务可以更关注自己的业务（而不用处理安全方面的东西）。
-
-### Authentication
 
 ### Different protocol
 
