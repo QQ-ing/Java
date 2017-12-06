@@ -10,6 +10,8 @@ API网关可以用于统一处理外部调用的认证和授权，避免每个�
 
 ### Different protocol
 
+有些微服务可能采用了不同的通信协议，例如HTTP,TCP,SOAP,Bubbo等。使用网关可以协调转换这些协议，然后对外部调用暴露唯一一种协议的接口(通常都使用HTTP协议)。
+
 ### Load-balancing
 
 ### Request dispatching (including service discovery)
