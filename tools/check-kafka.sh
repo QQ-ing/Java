@@ -1,15 +1,9 @@
 count=$(ps -ef | grep manager-address |grep -v "grep" |wc -l)
-if [ $count -eq 0 ];then
-    echo "check sss was stoped, restart sss at `date`" >>  /var/log/checksss.log
-    ssserver --manager-address=127.0.0.1:1234 -c /etc/shadowsocks.json -d restart
+if [ $count -ne 2 ];then
+    sudo pkill java
+    sudo rm -rf /tmp/*
+    sudo rm -rf /opt/kafka/logs/*
+    sudo sh /opt/kafka/start.sh
 else
-    echo "ssserver -s running"
-fi
-
-COUNT=$(ps ax | grep kikit.jar | grep java | wc -l)
-if [ $COUNT -eq 0 ]; then
-    echo 'start kikit'
-    sh /opt/kikit/start.sh
-else
-    echo 'kikit is running'
+    echo "kafka -s running"
 fi
