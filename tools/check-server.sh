@@ -6,7 +6,7 @@ else
     echo "ssserver -s running"
 fi
 
-COUNT=$(ps ax | grep kikit.jar | grep java | wc -l)
+COUNT=$((ps ax | grep kikit.jar | grep java | wc -l) + 0)
 if [ $COUNT -eq 0 ];then
     echo "start kikit"
     sh /opt/kikit/start.sh
