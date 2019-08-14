@@ -15,7 +15,7 @@ else
 fi
 
 SIZE=$(du /opt/kikit/logs/ | cut -f 1)
-if [ $SIZE -gt 642360 ];then
+if [ $SIZE -gt 1 ];then
    echo "delete logs in /opt/kikit/logs/2*"
    rm -rf /opt/kikit/logs/2*
 else
