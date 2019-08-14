@@ -8,10 +8,10 @@ fi
 
 COUNT=$(ps ax | grep kikit.jar | grep java | wc -l)
 if [ $COUNT -eq 0 ];then
-    echo 'start kikit'
+    echo "start kikit"
     sh /opt/kikit/start.sh
 else
-    echo 'kikit is running'
+    echo "kikit is running"
 fi
 
 SIZE=$(du /opt/kikit/logs/ | cut -f 1)
