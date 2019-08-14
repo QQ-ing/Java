@@ -7,7 +7,7 @@ else
 fi
 
 COUNT=$(ps ax | grep kikit.jar | grep java | wc -l)
-if [ $COUNT -eq 0 ]; then
+if [ $COUNT -eq 0 ];then
     echo 'start kikit'
     sh /opt/kikit/start.sh
 else
@@ -15,7 +15,7 @@ else
 fi
 
 SIZE=$(du /opt/kikit/logs/ | cut -f 1)
-if [ $SIZE -gt 642360‬ ]; then
+if [ $SIZE -gt 642360‬ ];then
    echo 'delete logs in /opt/kikit/logs/2*'
    rm -rf /opt/kikit/logs/2*
 else
