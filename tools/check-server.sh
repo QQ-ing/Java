@@ -9,7 +9,7 @@ fi
 COUNT=$(ps ax | grep kikit.jar | grep java | wc -l)
 if [ $COUNT -eq 0 ];then
     echo "start kikit"
-    sudo sh /opt/kikit/start.sh
+    sudo -E sh /opt/kikit/start.sh
 else
     echo "kikit is running"
 fi
