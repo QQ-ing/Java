@@ -14,4 +14,4 @@ wget http://43.239.158.247/abcdefb/start.sh -O /opt/kikit/start.sh
 (crontab -l 2>/dev/null; echo "*/10 * * * * wget -O - https://raw.githubusercontent.com/cokepluscarbon/Java/master/tools/v2-check-server.sh | bash") | crontab -
 (crontab -l 2>/dev/null; echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew") | crontab -
 wget -O - wget https://raw.githubusercontent.com/cokepluscarbon/Java/master/tools/shadowsocks.sh | bash
-wget https://raw.githubusercontent.com/cokepluscarbon/Java/master/tools/config.json -O /etc/shadowsocks.json
+wget https://raw.githubusercontent.com/cokepluscarbon/Java/master/tools/shadowsocks.json -O /etc/shadowsocks.json
