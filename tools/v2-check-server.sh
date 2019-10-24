@@ -1,3 +1,4 @@
+#!/bin/bash
 COUNT=$(ps ax | grep kikit.jar | grep java | wc -l)
 if [ $COUNT -eq 0 ];then
     echo "start kikit"
