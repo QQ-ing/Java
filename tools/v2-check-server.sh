@@ -1,7 +1,7 @@
 #!/bin/bash
 COUNT=$(ps ax | grep kikit.jar | grep java | wc -l)
 if [ $COUNT -eq 0 ];then
-    sudo source /etc/profile
+    source /etc/profile
     echo "start kikit"
     sudo -E sh /opt/kikit/start.sh
 else
